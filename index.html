@@ -11,23 +11,25 @@
         <div class="left-section">
             <div class="logo">a</div>
             <div class="input-area">
-                <input placeholder="Ingrese el texto aqui"></input>
+                <textarea id="inputText" placeholder="Ingrese el texto aqui"></textarea>
             </div>
             <div class="note">
                 <p>⚠️ Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="buttons">
-                <button class="encrypt-btn">Encriptar</button>
-                <button class="decrypt-btn">Desencriptar</button>
+                <button onclick="handleEncrypt()" class="encrypt-btn">Encriptar</button>
+                <button onclick="handleDecrypt()" class="decrypt-btn">Desencriptar</button>
             </div>
         </div>
         <div class="right-section">
             <div class="image-area">
-                <img src="/encripta/assets/muñeco.png" alt="Image">
-                <p>Ningún mensaje fue encontrado</p>
-                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                <img id="img" src="/assets/muñeco.png" alt="Image">
+                <p id="msg">Ningún mensaje fue encontrado</p>
+                <p id="result">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button id="copyBtn" class="hide" onclick="copyToClipboard()">Copiar</button>
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
